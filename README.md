@@ -1,6 +1,5 @@
 # Layout Aware Renaming Plugin
 
-![Plugin Icon](icon.png)  
 *Automatically rename elements based on their grid layout.*
 
 ---
@@ -49,30 +48,36 @@
 
 ## Examples
 ### Before
+```
 ┌─────────┐ ┌─────────┐ ┌─────────┐
 │ Rect 4  │ │ Rect 5  │ │ Rect 2  │
 └─────────┘ └─────────┘ └─────────┘
 ┌─────────┐ ┌─────────┐ ┌─────────┐
 │ Rect 1  │ │ Rect 3  │ │ Rect 6  │
 └─────────┘ └─────────┘ └─────────┘
+```
 ### After (Prefix: "Item-", Suffix: Numbers)
+```
 ┌─────────┐ ┌─────────┐ ┌─────────┐
 │ Item-1  │ │ Item-2  │ │ Item-3  │
 └─────────┘ └─────────┘ └─────────┘
 ┌─────────┐ ┌─────────┐ ┌─────────┐
 │ Item-4  │ │ Item-5  │ │ Item-6  │
 └─────────┘ └─────────┘ └─────────┘
+```
 ### After (Prefix: "Section-", Suffix: Letters)
+```
 ┌────────────┐ ┌────────────┐ ┌────────────┐
 │ Section-A  │ │ Section-B  │ │ Section-C  │
 └────────────┘ └────────────┘ └────────────┘
 ┌────────────┐ ┌────────────┐ ┌────────────┐
 │ Section-D  │ │ Section-E  │ │ Section-F  │
 └────────────┘ └────────────┘ └────────────┘
+```
 ---
 
 ## Support
-- **Issues**: Report bugs or request features on [GitHub]().
+- **Issues**: Report bugs or request features on [GitHub](https://github.com/dlnash96/Layout-Aware-Renaming).
 
 ---
 
@@ -86,7 +91,7 @@
 ---
 
 ## License
-This plugin is open-source and available under the [MIT License](LICENSE).
+This plugin is open-source and available under the [MIT License](https://opensource.org/license/mit).
 
 ---
 
