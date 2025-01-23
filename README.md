@@ -1,40 +1,96 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+# Layout Aware Renaming Plugin
 
-  https://www.figma.com/plugin-docs/plugin-quickstart-guide/
+![Plugin Icon](icon.png)  
+*Automatically rename elements based on their grid layout.*
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+---
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+## Features
+- **Auto-Detect Grids**: Automatically detects rows and columns in your selection.
+- **Custom Naming**: Add prefixes and choose between numeric or alphabetic suffixes.
+- **Manual Override**: Specify exact rows/columns when auto-detection fails.
+- **Mixed Sizes**: Works with elements of different sizes in the same grid.
+- **Figma & FigJam**: Compatible with both Figma and FigJam (limited support).
 
-  https://nodejs.org/en/download/
+---
 
-Next, install TypeScript using the command:
+## How It Works
+1. Select elements arranged in a grid.
+2. Run the plugin.
+3. Choose your naming preferences:
+   - **Prefix**: Add a custom prefix (e.g., "Item-")
+   - **Suffix**: Use numbers (1, 2, 3) or letters (A, B, C)
+4. Let the plugin rename your elements!
 
-  npm install -g typescript
+---
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+## Installation
+1. Open the plugin in the Figma Community: [Install Plugin](#)
+2. Click **"Try it out"** to add it to your Figma account.
 
-  npm install --save-dev @figma/plugin-typings
+---
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+## Usage
+### Auto-Detect Mode
+1. Select elements in a grid layout.
+2. Run the plugin.
+3. Enable **Auto Detect Grid**.
+4. Enter a prefix and choose a suffix type.
+5. Click **Rename Elements**.
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
+### Manual Mode
+1. Select elements.
+2. Run the plugin.
+3. Disable **Auto Detect Grid**.
+4. Enter the number of rows and columns.
+5. Click **Rename Elements**.
 
-For more information, visit https://www.typescriptlang.org/
+---
 
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
+## Examples
+### Before
+┌─────────┐ ┌─────────┐ ┌─────────┐
+│ Rect 4  │ │ Rect 5  │ │ Rect 2  │
+└─────────┘ └─────────┘ └─────────┘
+┌─────────┐ ┌─────────┐ ┌─────────┐
+│ Rect 1  │ │ Rect 3  │ │ Rect 6  │
+└─────────┘ └─────────┘ └─────────┘
+### After (Prefix: "Item-", Suffix: Numbers)
+┌─────────┐ ┌─────────┐ ┌─────────┐
+│ Item-1  │ │ Item-2  │ │ Item-3  │
+└─────────┘ └─────────┘ └─────────┘
+┌─────────┐ ┌─────────┐ ┌─────────┐
+│ Item-4  │ │ Item-5  │ │ Item-6  │
+└─────────┘ └─────────┘ └─────────┘
+### After (Prefix: "Section-", Suffix: Letters)
+┌────────────┐ ┌────────────┐ ┌────────────┐
+│ Section-A  │ │ Section-B  │ │ Section-C  │
+└────────────┘ └────────────┘ └────────────┘
+┌────────────┐ ┌────────────┐ ┌────────────┐
+│ Section-D  │ │ Section-E  │ │ Section-F  │
+└────────────┘ └────────────┘ └────────────┘
+---
 
-We recommend writing TypeScript code using Visual Studio code:
+## Support
+- **Issues**: Report bugs or request features on [GitHub]().
 
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
+---
 
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+## Changelog
+### v1.0.0 (Initial Release)
+- Auto-detect grid layouts
+- Custom prefix and suffix options
+- Manual grid input fallback
+- Figma and FigJam support
+
+---
+
+## License
+This plugin is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## About the Author
+Created by David Nash.  
+Connect with me:
+- [LinkedIn](https://www.linkedin.com/in/hiredavidnash/) 
